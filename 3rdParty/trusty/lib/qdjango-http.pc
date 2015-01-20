@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/local/lib
+includedir=${prefix}/local/include/qdjango/http
+qt_config=include_source_dir lex yacc warn_on uic resources qt warn_on release incremental link_prl gdb_dwarf_index shared def_files_disabled exceptions no_mocdepend release stl qt_no_framework shared create_pc create_prl no_install_prl dll shared moc thread
+
+Name: Qdjango-http
+Description: Qdjango-http Library
+Version: 0.5.0
+Libs: -L${libdir} -lqdjango-http 
+Libs.private: -L/usr/lib/x86_64-linux-gnu  -lQtNetwork -lQtCore -lpthread   
+Cflags: -DQDJANGO_SHARED -I${includedir}
+
